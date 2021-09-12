@@ -5,11 +5,19 @@ import { makeStyles } from "@material-ui/core/styles";
 import { mergeClasses } from "@material-ui/styles";
 
 const useStyles = makeStyles({
+  container:{
+    width:"100vw",
+    height:"100vh",
+    display:"flex",
+    alignItems:"flex-start"
+    
+  },
   mybox: {
     width: 300,
-    backgroundColor: "white",
-    color:"red",
-    paddingTop:50
+    backgroundColor: "red",
+    color: "white",
+    paddingTop: 50,
+    borderRadius:4,
   },
 });
 
@@ -17,22 +25,28 @@ export default function App() {
   const classes = useStyles();
 
   return (
-    
-    <Box>
-    <Box className={classes.mybox}>
-      
-        <Typography variant="h3" color="secondary">
-          Hello World!
+    <Box className={classes.container}>
+      <Box className={classes.mybox}>
+        <Typography variant="h4">Heading 1</Typography>
+        <Typography variant="subtitle1">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae,
+          corrupti.
         </Typography>
-        <Typography variant="subtitle1" color="secondary">
-          {" "}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, et
-          facilis rem quidem nisi beatae delectus est dolore corrupti ab
-          voluptatibus cupiditate consequuntur earum odit quisquam perferendis
-          sint modi maxime id atque pariatur quo.{" "}
+      </Box>
+      <Box className={classes.mybox}>
+        <Typography variant="h4">Heading 2</Typography>
+        <Typography variant="subtitle1">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae,
+          corrupti.
         </Typography>
-     
-    </Box>
+      </Box>
+      <Box className={classes.mybox}>
+        <Typography variant="h4">Heading 3</Typography>
+        <Typography variant="subtitle1">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae,
+          corrupti.
+        </Typography>
+      </Box>
     </Box>
   );
 }
