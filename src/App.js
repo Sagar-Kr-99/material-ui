@@ -4,7 +4,7 @@ import { Box, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { mergeClasses } from "@material-ui/styles";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme)=>({
   container:{
     width:"100vw",
     height:"100vh",
@@ -14,12 +14,13 @@ const useStyles = makeStyles({
   },
   mybox: {
     width: 300,
-    backgroundColor: "red",
+    backgroundColor: theme.palette.primary.light,
     color: "white",
     paddingTop: 50,
     borderRadius:4,
+    boxShadow:"0px 10px 10px rgba(0,0,0,0.1)"
   },
-});
+}));
 
 export default function App() {
   const classes = useStyles();
